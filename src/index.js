@@ -50,12 +50,10 @@ nav.children[3].textContent = siteContent.nav["nav-item-4"];
 nav.children[4].textContent = siteContent.nav["nav-item-5"];
 nav.children[5].textContent = siteContent.nav["nav-item-6"];
 //nav add class, my loops weren't working so i just used children again.
-nav.children[0].setAttribute("class", "italic");
-nav.children[1].setAttribute("class", "italic");
-nav.children[2].setAttribute("class", "italic");
-nav.children[3].setAttribute("class", "italic");
-nav.children[4].setAttribute("class", "italic");
-nav.children[5].setAttribute("class", "italic");
+console.log(nav.children.length);
+for(let i = 0;i < nav.children.length;i++){
+  nav.children[i].setAttribute("class", "italic");
+}
 console.log(nav)
 //logo img
 let logoImg = document.querySelector("#logo-img");
