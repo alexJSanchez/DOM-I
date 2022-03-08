@@ -40,3 +40,63 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//nav
+let nav = document.querySelector("nav");
+nav.children[0].textContent = siteContent.nav["nav-item-1"];
+nav.children[1].textContent = siteContent.nav["nav-item-2"];
+nav.children[2].textContent = siteContent.nav["nav-item-3"];
+nav.children[3].textContent = siteContent.nav["nav-item-4"];
+nav.children[4].textContent = siteContent.nav["nav-item-5"];
+nav.children[5].textContent = siteContent.nav["nav-item-6"];
+//nav add class, my loops weren't working so i just used children again.
+nav.children[0].setAttribute("class", "italic");
+nav.children[1].setAttribute("class", "italic");
+nav.children[2].setAttribute("class", "italic");
+nav.children[3].setAttribute("class", "italic");
+nav.children[4].setAttribute("class", "italic");
+nav.children[5].setAttribute("class", "italic");
+console.log(nav)
+//logo img
+let logoImg = document.querySelector("#logo-img");
+logoImg.src = siteContent.images["logo-img"];
+
+//cta-text, H1
+let ctaText = document.querySelector(".cta");
+
+ctaText.querySelector('h1').textContent = siteContent.cta["h1"];
+//cta-text, Button
+ctaText.querySelector('button').textContent = siteContent.cta["button"];
+//cta-text, img
+document.querySelector("#cta-img").src = siteContent.images["cta-img"];
+//main content / img
+let middleImg = document.querySelector(".middle-img");
+middleImg.src = siteContent.images["accent-img"]
+//main content / top content
+let topContent = document.querySelector(".top-content");
+topContent.children[0].querySelector("h4").textContent = siteContent["main-content"]['features-h4'];
+topContent.children[0].querySelector("p").textContent = siteContent["main-content"]['features-content'];
+// top content second section
+topContent.children[1].querySelector("h4").textContent = siteContent["main-content"]['about-h4'];
+topContent.children[1].querySelector("p").textContent = siteContent["main-content"]['about-content'];
+  
+// bottom content
+let bottomContent = document.querySelector(".bottom-content");
+bottomContent.children[0].children[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContent.children[0].children[1].textContent = siteContent["main-content"]["services-content"];
+bottomContent.children[1].children[0].textContent = siteContent["main-content"]["product-h4"];
+bottomContent.children[1].children[1].textContent = siteContent["main-content"]["product-content"];
+bottomContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"];
+bottomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+//contact section
+let contactSection = document.querySelector(".contact");
+contactSection.children[0].textContent = siteContent['contact']["contact-h4"];
+contactSection.children[1].textContent = siteContent['contact']["address"];
+contactSection.children[2].textContent = siteContent['contact']["phone"];
+contactSection.children[3].textContent = siteContent['contact']["email"];
+
+//footer section
+let footerSection = document.querySelector("footer");
+footerSection.children[0].textContent = siteContent.footer.copyright
+
